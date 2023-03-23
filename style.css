@@ -1,0 +1,159 @@
+/*common style's for elements of all pages*/
+
+body {
+    margin: 0px;
+    z-index: -1;
+}
+
+ul {
+    list-style-type: none;
+}
+
+h2 {
+    font-family: 'Tilt Warp', cursive;
+    margin-left: 4em;
+}
+
+li {
+    display: inline;
+    margin-right: 20px;
+}
+
+footer {
+    text-align: center;
+    font-size 1.2em;
+    height: 5em;
+    margin-top: 3em;
+}
+
+header {
+    font-family: 'Tilt Warp', cursive;
+    text-transform: capitalize;
+    font-size: 2em;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, black, white);
+}
+
+.content {
+    font-size: 1.4em;
+    text-align: justify;
+}
+
+img {
+    margin: 0em;
+    margin-top: 0px;
+}
+
+/* specified styles for main page */
+
+#main-page-header {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/*p {
+    margin-left: 4em;
+}*/
+
+a {
+    color: #ff5600;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+
+#main-text {
+    padding: 15em 3em 0em 60%;
+}
+@media screen and (min-width: 1200px) {
+    #container {
+    /*    opacity: 50%;*/
+        background-image: url("main.jpg");
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #container::before {
+        content: "";
+        position: absolute; /* set the position to absolute */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 200%;
+        background-image: url('main.jpg'); /* set the background image */
+        background-size: cover;
+        opacity: 0.5; /* set the opacity to 50% */
+        z-index: -1; /* set the z-index to be lower than the content */
+    }
+    #main-text {
+        padding: 4em 2em 0em 2em;
+    }
+}
+
+/* style for 2 column part of site */
+.content-container {
+    display: inline-block;
+    margin: 7em 5em;
+}
+
+@media screen and (min-width: 800px) {
+    .left-content {
+        width: 45%;
+        float: left;
+    }
+
+    .right-content {
+        width: 45%;
+        float: right;
+/*        margin-right: 5%;*/
+    }
+    #kid-photo {
+        float: left;
+        margin-right: 0.5em;
+    }
+
+    #LeMans-photo {
+        float: right;
+        margin-left: 0.5em;
+    }
+
+    #national-team-photo {
+        width: 100%;
+    }
+
+    #ambassador-photo {
+        width: 60%;
+        float: right;
+        margin-left: 0.5em;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .content-container {
+        display: block;
+        margin: 7em 2em;
+    }
+
+    img, #ambassador-photo {
+        width: 100%;
+        margin: 0;
+    }
+
+    header {
+        font-size: 1.3em;
+    }
+
+    h2 {
+        margin-left: 0px;
+    }
+}
